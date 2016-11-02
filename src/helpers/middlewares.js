@@ -79,13 +79,7 @@ const startGame = store => next => action => {
             next(getRivalMoveAct());
         }
     })
-    .catch(er => {
-        if(er.status === 410){
-            next(setStartGoneErrorAct());
-        } else {
-            next(setStartErrorAct());
-        }
-    })
+    .catch(er => {next(setStartErrorAct());})
 };
 
 const makeMove = store => next => action => {
@@ -97,7 +91,6 @@ const makeMove = store => next => action => {
     if(side !== playingSide){return;}
 
     const body = JSON.stringify({move: action.move});
-
     fetch('http://xo.t.javascript.ninja/move', {
         method: 'POST',
         headers: {
@@ -118,7 +111,12 @@ const makeMove = store => next => action => {
             if(!r.win){next(getRivalMoveAct())}
         }
     })
-    .catch(er => next(setGameErrorAct()))
+    .catch(er => {
+            if(er.status === 410){
+                next(setStartGoneErrorAct());
+            } else {
+            next(setGameErrorAct())}
+    })
 }
 
 const getRivalMove = store => next => action => {
@@ -136,7 +134,7 @@ const getRivalMove = store => next => action => {
                 "Player-ID": `${playerId}`
             }
         })
-        .then(r => r.json())
+        .then(r =>  r.json)
         .then(r => {
             next(setRivalMoveAct({
                 move: r.move ? r.move : null,
@@ -144,7 +142,13 @@ const getRivalMove = store => next => action => {
                 message: r.win ? r.win : null
             }));     
         })
-        .catch(er => get());
+        .catch(er =>{
+            if(er.status === 410){
+                next(setStartGoneErrorAct());
+            } else {
+                 get();
+            }
+        });
 
         get();
     }
