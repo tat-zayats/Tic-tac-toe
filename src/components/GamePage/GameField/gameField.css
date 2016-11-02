@@ -1,0 +1,69 @@
+.gameField{
+    width: 600px;
+    height: 600px;
+    margin-left: 150px;
+    border-radius: 0 0 30px 30px;
+    background: #9e122b;
+    border-left: 20px solid #ffb400;
+    border-bottom: 20px solid #ca7807;
+    border-right: 20px solid #ffb400;
+}
+
+.gameField caption{
+    height: 50px;
+    border-radius: 30px 30px 0 0;
+    background: #9e122b;
+    color: #fff38a;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.gameField caption span{
+    height: 50px;
+    padding-left: 15px;
+    color: #ADFF2F;
+    font-weight: bold;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.gameField td {
+    position: relative;
+    border-radius: 20%;
+    background: #ffe684;
+}
+
+.gameField td.cross::before,
+.gameField td.cross::after{
+    content: '';
+    border-radius: 4px;
+    position: absolute;
+    background: #7ebb03;
+    width: 7px;
+    height: 35px;
+    top: 50%;
+    left: 50%;
+}
+
+td.cross::before{
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+td.cross::after{
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+td.zero::before{
+    content: '';
+    position: absolute;
+    background: #30882b;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

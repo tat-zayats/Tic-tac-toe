@@ -1,0 +1,50 @@
+.startGame{
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    height: 80px;
+    width: 200px;
+    border-radius: 0 50px 50px 0;
+    outline: none;
+    border: none;
+    color: #FFFF66;
+    background: #ff4040;
+    border-bottom: 6px solid #e60633;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.startGame::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -49px;
+    border-right: 70px solid #ff4040;
+    border-bottom: 36px solid transparent;
+    border-top: 36px solid transparent;
+}
+
+.startGame::after{
+    content: '';
+    position: absolute;
+    top: 43px;
+    left: -50px;
+    transform: translateY(-50%);
+    height: 6px;
+    border-right: 50px solid #e60633;
+    border-bottom: 27px solid transparent;
+    border-top: 18px solid transparent;
+
+}
+
+.startGame:hover{
+    background: #e60633;
+    border-bottom-color: transparent;
+}
+
+.startGame:hover::before,
+.startGame:hover::after{
+    border-right-color: #e60633;
+}

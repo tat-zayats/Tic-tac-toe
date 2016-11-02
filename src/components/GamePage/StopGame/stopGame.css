@@ -1,0 +1,106 @@
+.newGame{
+    position: absolute;
+    top: 152px;
+    left: 125px;
+    height: 80px;
+    width: 180px;
+    border-radius: 50px 0 0 50px;
+    color: #FFFF66;
+    background: #ff4040;
+    outline: none;
+    border: none;
+    border-bottom: 6px solid #e60633;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.newGame::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 150px;
+    border-left: 70px solid #ff4040;
+    border-bottom: 36px solid transparent;
+    border-top: 36px solid transparent;
+}
+
+.newGame::after{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 179px;
+    height: 3px;
+    transform: translateY(-50%);
+    border-left: 43px solid #e60633;
+    border-bottom: 24px solid transparent;
+    border-top: 22px solid transparent;
+}
+
+.newGame:hover{
+    background: #e60633;
+    border-bottom-color: transparent;
+}
+
+.newGame:hover::before,
+.newGame:hover::after{
+    border-left-color: #e60633;
+}
+
+.stopGame{
+    position: absolute;
+    top: 152px;
+    left: 125px;
+    height: 80px;
+    width: 180px;
+    border-radius: 50px 0 0 50px;
+    background: #FFFF66;
+    color: #84840b;
+    border: none;
+    outline: none;
+    border-bottom: 6px solid #fc9a38;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.stopGame::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 150px;
+    border-left: 70px solid #FFFF66;
+    border-bottom: 36px solid transparent;
+    border-top: 36px solid transparent;
+}
+
+.stopGame::after{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 179px;
+    transform: translateY(-50%);
+    height: 3px;
+    border-left: 43px solid #fc9a38;
+    border-bottom: 24px solid transparent;
+    border-top: 22px solid transparent;
+}
+
+.stopGame:hover{
+    background: #ff4040;
+    color: #FFFF66;
+    border-bottom-color: #e60633;
+}
+
+.stopGame:hover::before{
+    border-left-color: #ff4040;
+}
+
+.stopGame:hover::after{
+    border-left-color: #e60633;
+}
+

@@ -1,0 +1,30 @@
+.message.error{
+    position: absolute;
+    bottom: 50px;
+    left: 210px;
+    width: 240px;
+    height: 35px;
+    border-radius: 0 50px 50px 0;
+    outline: none;
+    border: none;
+    color: #9e122b;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    text-align: center;
+    
+}
+
+.message.loading{
+    position: absolute;
+    left: 250px;
+    bottom: 65px;
+    width: 240px;
+    height: 25px;
+    border-radius: 0 50px 50px 0;
+    outline: none;
+    border: none;
+    color: #9e122b;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
