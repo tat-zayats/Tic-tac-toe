@@ -1,7 +1,7 @@
 ## Tic-tac-toe
 > Non-working version because of a broken server
 
-**Требования:**
+**Requirements:**
 
 Выведите список игр и кнопку "Создать игру"
 
