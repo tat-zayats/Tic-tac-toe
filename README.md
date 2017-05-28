@@ -1,5 +1,5 @@
 ## Tic-tac-toe
-##Non-working version because of a broken server
+### Non-working version because of a broken server
 
 **Требования:**
 
